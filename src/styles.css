@@ -1,0 +1,21 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+.box {
+    max-width: 100%;
+    background-color:#282be2
+  }
+  #grad1 {
+    
+    background-color: #ADD8E6; 
+    background-image: linear-gradient(to right, #ADD8E6, #836FFF);
+  }
+  .corazul{
+    background-color:#ADD8E6
+  }
+  .corbranco{
+    background-color:white;
+    
+  }
+  .titulo{
+    color: cyan;
+  }
