@@ -1,74 +1,20 @@
-<form  *ngFor="let item of listaForm">
-  <div class="form-group">
-
-    <div class="col-sm-12 row">
-      <div class="col-sm-1">
-        <img class=" mt-3 " src="{{item.poster}}" alt="" style="width:65px">
-      </div>
-      <div class="col-sm-6 mt-2 p-0">
-        <h1 class="filme">{{item.nome}}</h1>
-      </div>
+<form  [formGroup]="formUsuario">
+  <div class="form-group row p-2">
+    <div class="col-5">
+      <label for="nome">Login</label>
+      <input type="string" class="form-control" id="nome" placeholder="Nome" formControlName="nome">
+    </div>
+    <div class="col-5">
+      <label for="nome">Senha</label>
+      <input type="password" class="form-control" id="senha" placeholder="Senha" formControlName="senha">
     </div>
   </div>
   <div class="form-group row p-2">
-    <div class="col-2">
-      <label for="numeroFilme">Número do Filme</label>
-      <input type="number" class="form-control" id="numeroFilme" placeholder="Nº do Filme" value={{item.id}}>
+    <div class="col-sm-1">
+      <input type="submit" (click)="onSubmit()" class="btn btn-primary mt-4" value="Logar">
     </div>
-    <div class="col-2">
-      <label for="tipoProduto">Tipo Produto</label>
-      <select class="form-control" id="tipoProduto">
-        <option>{{item.tipoProduto}}</option>
-      </select>
-    </div>
-    <div class="col-2">
-      <label for="tipoFilme">Tipo de Filme</label>
-      <select class="form-control" id="tipoProduto">
-        <option>{{item.tipoFilme}}</option>
-      </select>
-    </div>
-    <div class="col-2">
-      <label for="genero">Gênero</label>
-      <select class="form-control" id="tipoProduto">
-        <option>{{item.genero}}</option>
-      </select>
-    </div>
-    <div class="col-2">
-      <label for="fornecedor">Fornecedor</label>
-      <select class="form-control" id="tipoProduto">
-        <option>{{item.fornecedor}}</option>
-      </select>
-    </div>
-    <div class="col-2 mt-4">
-      <button type="submit" class="btn btn-primary">Buscar</button>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="p-2">
-      <label for="tituloFilme">Título do Filme</label>
-      <input type="text" class="form-control" id="tituloFilme" placeholder="Título do Filme" value={{item.nome}}>
-    </div>
-    <div class="p-2">
-      <label for="atores">Principais Atores</label>
-      <input type="text" class="form-control" id="atores" placeholder="Principais Atores" value={{item.ator}}>
-    </div>
-    <div class="p-2">
-      <label for="diretores">Principais Diretores</label>
-      <input type="text" class="form-control" id="diretores" placeholder="Principais Diretores" value={{item.diretor}}>
-    </div>
-  </div>
-  <div class="form-group row p-2">
-    <div class="col-3">
-      <label for="idioma">Tipo de idioma</label>
-      <input type="text" class="form-control" id="idioma" placeholder="Tipo de idioma" value={{item.idioma}}>
-    </div>
-    <div class="col-3">
-      <label for="valorLocacao">Valor da Locação</label>
-      <input type="string" class="form-control" id="valorLocacao" placeholder="Valor da Locação" value=R${{item.valor}}>
-    </div>
-    <div class="col-3">
-      <label for="dataCadastro">Data do Cadastro</label>
-      <input type="text" class="form-control" id="dataCadastro" placeholder="Data do Cadastro" value={{item.data}}>
+    <div class="col-sm-1">
+      <a href="#" class="btn btn-secondary mt-4 btt-seg" (click)="novo()">Cancelar</a>
     </div>
   </div>
 </form>

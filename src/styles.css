@@ -10,7 +10,8 @@
     background-image: linear-gradient(to right, #ADD8E6, #836FFF);
   }
   .corazul{
-    background-color:#ADD8E6
+    background-color:#ADD8E6;
+    
   }
   .corbranco{
     background-color:white;
@@ -18,4 +19,22 @@
   }
   .titulo{
     color: cyan;
+  }
+  .centralizar{
+    justify-content: center;
+  }
+  
+  .alinha{
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: end;
+  }
+  .alinhaNome{
+    display: flex;
+    flex: 1 0 5%;
+    justify-content: flex-start;
+  }
+  .icons{
+    width: 15px;
+    height: 15px;
   }

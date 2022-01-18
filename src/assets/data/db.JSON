@@ -1,0 +1,25 @@
+{
+    "usuarios":{
+        "user1":{
+        "senha":"123",
+        "id":1,
+        "nome":"Usuário 1",
+            "rotas":[
+            "/home"
+            ]
+    },
+    "user2":{
+        "senha":"456",
+        "id":2,
+        "nome":"Usuário Administrador",
+            "rotas":[
+            "/home",
+            "/rota1",
+            "/rota1/detalhe",
+            "/rota1/detalhe/:id",
+            "/rota2",
+            "/rota2/detalhe"
+            ]
+        }
+    }
+}
